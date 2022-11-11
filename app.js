@@ -2,9 +2,11 @@ var alHours = '';
 var alMinutes = '';
 
 var alarmTime = '';
+var alarm = document.getElementById("alarm");
+var alarmTimeSelect = document.getElementById("alarmTimeSelect")
 
 //Alarm Clock display settings
-function digitalClock(){
+const digitalClock=()=>{
 var date = new Date();
 var hours = date.getHours() + '';
 var minutes = date.getMinutes() + '';
@@ -36,19 +38,19 @@ if (minutes == alMinutes && hours == alHours && date.getSeconds() < 12 ) {
 }
 
 // Set Alarm Time
-function setAlrmTime() {
-var timeString = String(document.getElementById("alarmTimeSelect").value);
+const setAlrmTime = () => {
+var timeString = String(alarmTimeSelect.value);
 alHours = timeString.charAt(0) + timeString.charAt(1);
 alMinutes = timeString.charAt(3) + timeString.charAt(4);
 
-document.getElementById("alarm").innerHTML = 'Alarm: ' + alHours + ':' + alMinutes ;    
+alarm.innerHTML = 'Alarm: ' + alHours + ':' + alMinutes ;    
 }
 
 //Snooze Button set to 5 minutes
-function snooze() {
+const snooze = () => {
 if (alMinutes != '' || alHours != ''){
   //set snooze time below
-    var snoozMinutes = 01;
+    var snoozMinutes = 05;
     if  (Number(alMinutes) < 50)  {
         snoozMinutes += Number(alMinutes);
         alMinutes = String(snoozMinutes);
@@ -66,22 +68,22 @@ if (alMinutes != '' || alHours != ''){
         String(alHours );
     }
 
-    document.getElementById("alarm").innerHTML = 'Alarm: ' + alHours + ':' + alMinutes;
+   alarm.innerHTML = 'Alarm: ' + alHours + ':' + alMinutes;
 }    
 }
-const snoooze = ()=>{
+const snoooze = () => {
   snooze();
-   setInterval(snooze, 120000); 
+   setInterval(snooze, 300000); 
   
   }
-  function myStop() {
-    document.getElementById("alarm").innerHTML =""
+ const myStop = () => {
+    alarm.innerHTML =""
       clearInterval(snoooze);
     }
 
   
 //Alarm Sound//
-function playBeep() {
+const playBeep = ()=> {
 var audio = new Audio('audio');
 //   Use  wav file for alarm
 //    audio.src = "chime.wav";
@@ -93,5 +95,4 @@ audio.play();
 digitalClock();
 //Interval needed to make Clock run live
 setInterval(digitalClock, 1000);
-
 
