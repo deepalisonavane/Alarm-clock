@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: chartreuse;
+  background-color: black ;
+  min-width: 100vw;
+  min-height: 100vh;
+text-align: center;
+}
+
+h1 { 
+  font-size: 7vw;
+  color: chartreuse;
+  position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);    
+}
+
+span { 
+  font-size: 3vw;
+}
+
+
+#setAlrm { 
+  font-size: 3vw;
+  color: chartreuse;
+  background: black;
+  border: 2px solid rgb(85, 255, 0);
+  border-radius: 15px;
+/*     position: absolute;
+      top: 46%;
+      left: 40%;
+      transform: translate(-50%,-50%);   */
+      outline: none;  
+}
+
+#setAlrm:hover {
+  cursor: pointer;
+}
+
+#snoozAlrm { 
+  font-size: 3vw;
+  color: chartreuse;
+  background: black;
+  border: 2px solid chartreuse;
+  border-radius: 15px;
+/*     position: absolute;
+      top: 73%;
+      left: 62%;
+      transform: translate(-50%,-50%);   */
+      outline: none;  
+}
+
+#snoozAlrm:hover {
+  cursor: pointer;
+}
+
+#setAlrm:active {
+  color: rgb(255, 123, 0);
+  background: rgb(24, 24, 24);
+  border: 2px solid rgb(0, 255, 34);
+  outline: none;
+}
+
+#alarmTimeSelect {
+  font-size: 3vw;
+      color: chartreuse;
+      background: black;
+      border: 2px solid chartreuse;
+      border-radius: 15px;
+/*         position: absolute;
+          top: 46%;
+          left: 62%;
+          transform: translate(-50%,-50%);  
+          outline: none;   */
+  }
+
+  input[type=time]::-webkit-inner-spin-button,
+  input[type=time]::-webkit-outer-spin-button {  
+  background-color: black;
+  color: chartreuse;
+  opacity: 1;
+  
+  }
+
