@@ -38,7 +38,8 @@ span {
   cursor: pointer;
 }
 
-#snoozAlrm { 
+#snoozAlrm ,
+ #clearAlrm  { 
   font-size: 3vw;
   color: chartreuse;
   background: black;
@@ -51,6 +52,10 @@ span {
       outline: none;  
 }
 
+#clearAlrm {
+  border: 2px solid rgb(255, 0, 0) !important;
+
+}
 #snoozAlrm:hover {
   cursor: pointer;
 }
@@ -79,7 +84,7 @@ span {
   input[type=time]::-webkit-outer-spin-button {  
   background-color: black;
   color: chartreuse;
-  opacity: 1;
+  opacity: 0;
   
   }
 

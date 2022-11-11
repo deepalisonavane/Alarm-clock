@@ -11,9 +11,12 @@
     
     <div id="center">
         <button id="setAlrm" onclick="setAlrmTime()">Set Alarm Time</button>
-        <input type="time" name="alarmTimeSelect" id="alarmTimeSelect" value="00:00:00">
+        <input type="time" name="alarmTimeSelect" id="alarmTimeSelect" value="00:00">
       <button id="snoozAlrm" onclick=" snoooze()">Snooze Alarm</button></br>
-      <span id="alarm">Alarm not set</span>
+      <span id="alarm">Alarm not set</span></br>
+        <button id="clearAlrm" onclick="myStop()">Clear Alarm</button>
+     
+
         <h1 id="clock"></h1>
           <embed src="chime.wav" autostart="false" width="0" height="0" id="sound1"
         enablejavascript="true">
